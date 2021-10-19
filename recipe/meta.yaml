@@ -1,5 +1,5 @@
 {% set name = "stylegan2-pytorch" %}
-{% set version = "1.8.6" %}
+{% set version = "1.8.7" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/stylegan2_pytorch-{{ version }}.tar.gz
-  sha256: e7d6864800c5725eb81539ded12f42c38aed4eb175aa63db1ab54aec175f15c6
+  sha256: 6c7f08082cec2b35717e5359f2e6c453449814777646414e19af810d29a88136
 
 build:
   number: 0
@@ -20,7 +20,7 @@ build:
 requirements:
   host:
     - pip
-    - python 
+    - python
 
   run:
     - aim
@@ -30,7 +30,7 @@ requirements:
     - kornia >=0.5.4
     - numpy
     - pillow
-    - python 
+    - python
     - retry
     - pytorch >=1.8.0=cuda*
     - torchvision

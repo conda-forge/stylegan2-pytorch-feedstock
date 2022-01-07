@@ -31,7 +31,7 @@ requirements:
     - pillow
     - python >=3.6
     - retry
-    - torch
+    - pytorch
     - torchvision
     - tqdm
     - vector-quantize-pytorch ==0.1.0

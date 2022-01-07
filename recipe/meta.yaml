@@ -12,16 +12,15 @@ source:
 
 build:
   number: 0
-  skip: true # [cuda_compiler_version == "None" or cuda_compiler_version == "10.2"
+  noarch: python
   entry_points:
     - stylegan2_pytorch = stylegan2_pytorch.cli:main
-
 
 requirements:
   host:
     - pip
-    - python
-
+    - python >=3.6
+    - version
   run:
     - aim
     - contrastive-learner >=0.1.0
@@ -30,16 +29,22 @@ requirements:
     - kornia >=0.5.4
     - numpy
     - pillow
-    - python
+    - python >=3.6
     - retry
-    - pytorch >=1.8.0=cuda*
+    - torch
     - torchvision
     - tqdm
-    - vector-quantize-pytorch >=0.1.0
+    - vector-quantize-pytorch ==0.1.0
 
 test:
   imports:
     - stylegan2_pytorch
+  commands:
+    - pip check
+    - stylegan2_pytorch --help
+  requires:
+    - pip
+
 
 about:
   home: https://github.com/lucidrains/stylegan2-pytorch

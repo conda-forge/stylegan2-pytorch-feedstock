@@ -20,7 +20,7 @@ requirements:
   host:
     - pip
     - python >=3.6
-    - version
+
   run:
     - aim
     - contrastive-learner >=0.1.0
@@ -55,4 +55,3 @@ about:
 extra:
   recipe-maintainers:
     - mxr-conda
-    - JennaLipscomb

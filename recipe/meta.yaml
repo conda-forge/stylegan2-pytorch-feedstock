@@ -1,5 +1,6 @@
 {% set name = "stylegan2-pytorch" %}
 {% set version = "1.8.7" %}
+{% set torch_proc_type = "cuda" if cuda_compiler_version != "None" else "cpu" %}
 
 
 package:
@@ -17,6 +18,8 @@ build:
     - stylegan2_pytorch = stylegan2_pytorch.cli:main
 
 requirements:
+  build:
+    - {{ compiler('cuda') }}  # [cuda_compiler_version != "None"]
   host:
     - pip
     - python >=3.6
@@ -35,6 +38,7 @@ requirements:
     - torchvision
     - tqdm
     - vector-quantize-pytorch ==0.1.0
+    - {{ pin_compatible('cudnn') }}  # [cuda_compiler_version != "None"]
 
 test:
   imports:

@@ -19,9 +19,12 @@ build:
 requirements:
   build:
     - {{ compiler('cuda') }}  # [cuda_compiler_version != "None"]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+
   host:
     - pip
     - python >=3.6
+    - cudnn  # [cuda_compiler_version != "None"]
 
   run:
     - aim

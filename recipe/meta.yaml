@@ -41,7 +41,7 @@ requirements:
     - pytorch-cpu  # [cuda_compiler_version == "None"]
     - torchvision
     - tqdm
-    - vector-quantize-pytorch ==0.1.0
+    - vector-quantize-pytorch
     - {{ pin_compatible('cudnn') }}  # [cuda_compiler_version != "None"]
 
 test:

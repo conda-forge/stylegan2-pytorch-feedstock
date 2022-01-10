@@ -37,8 +37,6 @@ requirements:
     - python >=3.6
     - retry
     - pytorch
-    - pytorch-gpu  # [cuda_compiler_version != "None"]
-    - pytorch-cpu  # [cuda_compiler_version == "None"]
     - torchvision
     - tqdm
     - vector-quantize-pytorch

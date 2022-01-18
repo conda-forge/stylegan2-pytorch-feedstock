@@ -24,7 +24,7 @@ requirements:
 
   host:
     - pip
-    - python >=3.6
+    - python
     - cudnn  # [cuda_compiler_version != "None"]
 
   run:
@@ -35,7 +35,7 @@ requirements:
     - kornia >=0.5.4
     - numpy
     - pillow
-    - python >=3.6
+    - python
     - retry
     - pytorch >=1.8.0=cuda*
     - torchvision

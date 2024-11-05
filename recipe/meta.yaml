@@ -11,7 +11,7 @@ source:
   sha256: 6c7f08082cec2b35717e5359f2e6c453449814777646414e19af810d29a88136
 
 build:
-  number: 0
+  number: 1
   skip: true # [cuda_compiler_version == "None" or cuda_compiler_version == "10.2"
   entry_points:
     - stylegan2_pytorch = stylegan2_pytorch.cli:main
